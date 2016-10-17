@@ -7,6 +7,7 @@
 //
 
 #import "HUD.h"
+#import <objc/runtime.h>
 
 
 
@@ -51,6 +52,61 @@
 - (void)showAnimated:(BOOL)animated forTime:(NSTimeInterval)time {
     [self showAnimated:animated];
     [self hideAnimated:animated afterDelay:time];
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+@implementation UIViewController (HUD)
+
+- (void)setHudIndeterminate:(MBProgressHUD *)hudIndeterminate {
+    objc_setAssociatedObject(self, @selector(hudIndeterminate), hudIndeterminate, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (MBProgressHUD *)hudIndeterminate {
+    MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudIndeterminate));
+    if (hud) return hud;
+    
+    hud = [self.navigationController.view HUD:MBProgressHUDModeIndeterminate];
+    self.hudIndeterminate = hud;
+    return hud;
+}
+
+- (void)setHudDeterminate:(MBProgressHUD *)hudDeterminate {
+    objc_setAssociatedObject(self, @selector(hudDeterminate), hudDeterminate, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (MBProgressHUD *)hudDeterminate {
+    MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudDeterminate));
+    if (hud) return hud;
+    
+    hud = [self.navigationController.view HUD:MBProgressHUDModeDeterminate];
+    hud.mode = MBProgressHUDModeDeterminate;
+    self.hudDeterminate = hud;
+    return hud;
+}
+
+- (void)setHudText:(MBProgressHUD *)hudText {
+    objc_setAssociatedObject(self, @selector(hudText), hudText, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (MBProgressHUD *)hudText {
+    MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudText));
+    if (hud) return hud;
+    
+    hud = [self.navigationController.view HUD:MBProgressHUDModeText];
+    hud.mode = MBProgressHUDModeText;
+    hud.offset = CGPointMake(0.0, -MBProgressMaxOffset);
+    self.hudText = hud;
+    return hud;
 }
 
 @end

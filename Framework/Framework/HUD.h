@@ -41,3 +41,20 @@ FOUNDATION_EXPORT const unsigned char HUDVersionString[];
 - (void)showAnimated:(BOOL)animated forTime:(NSTimeInterval)time;
 
 @end
+
+
+
+
+
+
+
+
+
+
+@interface UIViewController (HUD)
+
+@property MBProgressHUD *hudIndeterminate;
+@property MBProgressHUD *hudDeterminate;
+@property MBProgressHUD *hudText;
+
+@end
