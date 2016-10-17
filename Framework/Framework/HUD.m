@@ -10,6 +10,13 @@
 
 
 
+
+
+
+
+
+
+
 @implementation UIView (HUD)
 
 - (MBProgressHUD *)HUD:(NSInteger)tag {
@@ -26,6 +33,24 @@
     hud.tag = tag;
     [self addSubview:hud];
     return hud;
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+@implementation MBProgressHUD (HUD)
+
+- (void)showAnimated:(BOOL)animated forTime:(NSTimeInterval)time {
+    [self showAnimated:animated];
+    [self hideAnimated:animated afterDelay:time];
 }
 
 @end
