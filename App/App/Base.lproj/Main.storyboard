@@ -19,16 +19,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcF-gE-f9k">
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Indeterminate"/>
                                 <connections>
-                                    <action selector="onShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L56-pS-Ki5"/>
+                                    <action selector="onIndeterminate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5af-Gj-i7r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-Dv-dle">
+                                <state key="normal" title="Determinate"/>
+                                <connections>
+                                    <action selector="onDeterminate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ERa-ub-kwl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64N-uV-JId">
+                                <state key="normal" title="Text"/>
+                                <connections>
+                                    <action selector="onText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ni6-uR-iHc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bcF-gE-f9k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BjX-iq-00x"/>
+                            <constraint firstItem="Eng-Dv-dle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3QF-al-sHa"/>
+                            <constraint firstItem="64N-uV-JId" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="9bj-rv-gRj"/>
+                            <constraint firstItem="bcF-gE-f9k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="BjX-iq-00x"/>
                             <constraint firstItem="bcF-gE-f9k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GkF-sn-Y0g"/>
+                            <constraint firstItem="Eng-Dv-dle" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TBE-5y-Loa"/>
+                            <constraint firstItem="64N-uV-JId" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kcZ-mn-aBf"/>
                         </constraints>
                     </view>
                 </viewController>

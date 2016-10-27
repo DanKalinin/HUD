@@ -15,6 +15,7 @@
 		371419BF1DB4300200995E78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371419BD1DB4300200995E78 /* LaunchScreen.storyboard */; };
 		371419CD1DB4303A00995E78 /* HUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371419CB1DB4300D00995E78 /* HUD.framework */; };
 		371419CE1DB4303A00995E78 /* HUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 371419CB1DB4300D00995E78 /* HUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375C554B1DC18A9A0099DD96 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 375C554A1DC18A9A0099DD96 /* Configuration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		371419BE1DB4300200995E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		371419C01DB4300200995E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		371419C61DB4300D00995E78 /* Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Framework.xcodeproj; path = ../Framework/Framework.xcodeproj; sourceTree = "<group>"; };
+		375C554A1DC18A9A0099DD96 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				371419B31DB4300200995E78 /* AppDelegate.m */,
 				371419B51DB4300200995E78 /* ViewController.h */,
 				371419B61DB4300200995E78 /* ViewController.m */,
+				375C554A1DC18A9A0099DD96 /* Configuration.plist */,
 				371419B81DB4300200995E78 /* Main.storyboard */,
 				371419BB1DB4300200995E78 /* Assets.xcassets */,
 				371419BD1DB4300200995E78 /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371419BF1DB4300200995E78 /* LaunchScreen.storyboard in Resources */,
+				375C554B1DC18A9A0099DD96 /* Configuration.plist in Resources */,
 				371419BC1DB4300200995E78 /* Assets.xcassets in Resources */,
 				371419BA1DB4300200995E78 /* Main.storyboard in Resources */,
 			);
@@ -379,6 +383,7 @@
 				371419C51DB4300200995E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

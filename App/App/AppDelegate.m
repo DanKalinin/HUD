@@ -7,16 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import <HUD/HUD.h>
+
+
 
 @interface AppDelegate ()
 
 @end
+
+
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    CGPoint p = CGPointZero;
+//    NSDictionary *d = (__bridge NSDictionary *)CGPointCreateDictionaryRepresentation(p);
+//    NSLog(@"d - %@", d);
+    
+//    NSDictionary *d = @{@"X" : @1.0, @"Y" : @2.0};
+//    CGPoint p;
+//    bool ok = CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)d, &p);
+//    NSLog(@"%i, %@", ok, [NSValue valueWithCGPoint:p]);
+    
+    MBProgressHUD.configuration = [[HUDConfiguration alloc] initWithName:@"Configuration" bundle:nil];
+    
     return YES;
 }
 

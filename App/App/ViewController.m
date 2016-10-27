@@ -19,9 +19,18 @@
 
 @implementation ViewController
 
-- (IBAction)onShow:(UIButton *)sender {
-    [[self.view HUD:0] showAnimated:YES];
-    [[self.view HUD:0] hideAnimated:YES afterDelay:3.0];
+- (IBAction)onIndeterminate:(UIButton *)sender {
+    [self.hudIndeterminate showAnimated:YES forTime:2.0];
+}
+
+- (IBAction)onDeterminate:(UIButton *)sender {
+    self.hudDeterminate.progress = 0.5;
+    [self.hudDeterminate showAnimated:YES forTime:2.0];
+}
+
+- (IBAction)onText:(UIButton *)sender {
+    self.hudText.detailsLabel.text = @"Hello world";
+    [self.hudText showAnimated:YES forTime:2.0];
 }
 
 @end

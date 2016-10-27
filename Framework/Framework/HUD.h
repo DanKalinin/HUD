@@ -21,6 +21,21 @@ FOUNDATION_EXPORT const unsigned char HUDVersionString[];
 
 
 
+@interface HUDConfiguration : NSObject
+
+- (instancetype)initWithName:(NSString *)name bundle:(NSBundle *)bundle;
+
+@end
+
+
+
+
+
+
+
+
+
+
 @interface UIView (HUD)
 
 - (MBProgressHUD *)HUD:(NSInteger)tag;
@@ -37,6 +52,8 @@ FOUNDATION_EXPORT const unsigned char HUDVersionString[];
 
 
 @interface MBProgressHUD (HUD)
+
+@property (class) HUDConfiguration *configuration;
 
 - (void)showAnimated:(BOOL)animated forTime:(NSTimeInterval)time;
 
