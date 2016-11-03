@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		371419961DB42B5600995E78 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 371419941DB42B5600995E78 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		371419971DB42B5600995E78 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 371419951DB42B5600995E78 /* MBProgressHUD.m */; };
+		371035A61DCB49650091CA57 /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375C55411DC183600099DD96 /* Helpers.framework */; };
 		3714199E1DB42BD000995E78 /* HUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 3714199C1DB42BD000995E78 /* HUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3714199F1DB42BD000995E78 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3714199D1DB42BD000995E78 /* HUD.m */; };
+		37C5CA421DCB543500C56149 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 371419941DB42B5600995E78 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37C5CA431DCB543800C56149 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 371419951DB42B5600995E78 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371035A61DCB49650091CA57 /* Helpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +106,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C5CA421DCB543500C56149 /* MBProgressHUD.h in Headers */,
 				3714199E1DB42BD000995E78 /* HUD.h in Headers */,
-				371419961DB42B5600995E78 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371419971DB42B5600995E78 /* MBProgressHUD.m in Sources */,
 				3714199F1DB42BD000995E78 /* HUD.m in Sources */,
+				37C5CA431DCB543800C56149 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +228,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -242,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -277,6 +280,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -287,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
