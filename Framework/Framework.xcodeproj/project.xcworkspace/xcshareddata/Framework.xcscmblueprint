@@ -7,14 +7,14 @@
     "BFADB2A208B674039E55D77ECBE534817A51E4B7" : 9223372036854775807,
     "345F2E131FDEB4C61BA8C91826DDEB3AA62AD086" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "996B3D08-05DC-4D76-8B4E-FB8AD192A6FA",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4DC7C718-417E-4E6F-B95F-D923319138C3",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "BFADB2A208B674039E55D77ECBE534817A51E4B7" : "Helpers\/",
     "345F2E131FDEB4C61BA8C91826DDEB3AA62AD086" : "HUD\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "App",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Framework",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "App\/App.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Framework\/Framework.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DanKalinin\/HUD.git",
