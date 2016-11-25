@@ -165,7 +165,7 @@ static HUDConfiguration *_configuration = nil;
     MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudIndeterminate));
     if (hud) return hud;
     
-    hud = [UIApplication.sharedApplication.keyWindow HUD:MBProgressHUDModeIndeterminate];
+    hud = [self.HUDView HUD:MBProgressHUDModeIndeterminate];
     self.hudIndeterminate = hud;
     return hud;
 }
@@ -178,7 +178,7 @@ static HUDConfiguration *_configuration = nil;
     MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudDeterminate));
     if (hud) return hud;
     
-    hud = [UIApplication.sharedApplication.keyWindow HUD:MBProgressHUDModeDeterminate];
+    hud = [self.HUDView HUD:MBProgressHUDModeDeterminate];
     hud.mode = MBProgressHUDModeDeterminate;
     self.hudDeterminate = hud;
     return hud;
@@ -192,10 +192,20 @@ static HUDConfiguration *_configuration = nil;
     MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudText));
     if (hud) return hud;
     
-    hud = [UIApplication.sharedApplication.keyWindow HUD:MBProgressHUDModeText];
+    hud = [self.HUDView HUD:MBProgressHUDModeText];
     hud.mode = MBProgressHUDModeText;
     self.hudText = hud;
     return hud;
+}
+
+- (UIView *)HUDView {
+    UIView *view = self.tabBarController.view;
+    if (view) return view;
+    
+    view = self.navigationController.view;
+    if (view) return view;
+    
+    return self.view;
 }
 
 @end
