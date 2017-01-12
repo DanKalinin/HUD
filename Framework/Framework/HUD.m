@@ -103,7 +103,7 @@ static NSString *const OffsetKey = @"offset";
         }
     }
     
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self];
+    MBProgressHUD *hud = [MBProgressHUD.alloc initWithView:self];
     hud.contentColor = UIColor.whiteColor;
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.bezelView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.8];
