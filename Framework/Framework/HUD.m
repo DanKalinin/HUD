@@ -198,6 +198,20 @@ static HUDConfiguration *_configuration = nil;
     return hud;
 }
 
+- (void)setHudIndeterminateWithButton:(MBProgressHUD *)hudIndeterminateWithButton {
+    objc_setAssociatedObject(self, @selector(hudIndeterminateWithButton), hudIndeterminateWithButton, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (MBProgressHUD *)hudIndeterminateWithButton {
+    MBProgressHUD *hud = objc_getAssociatedObject(self, @selector(hudIndeterminateWithButton));
+    if (hud) return hud;
+    
+    hud = [self.HUDView HUD:-(MBProgressHUDModeIndeterminate + 1)];
+    [hud.button addTarget:self action:@selector(onHudButton:) forControlEvents:UIControlEventTouchUpInside];
+    self.hudIndeterminateWithButton = hud;
+    return hud;
+}
+
 - (UIView *)HUDView {
     UIView *view = self.tabBarController.view;
     if (view) return view;
@@ -206,6 +220,12 @@ static HUDConfiguration *_configuration = nil;
     if (view) return view;
     
     return self.view;
+}
+
+#pragma mark - Actions
+
+- (void)onHudButton:(UIButton *)sender {
+    
 }
 
 @end

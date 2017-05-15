@@ -70,8 +70,12 @@ FOUNDATION_EXPORT const unsigned char HUDVersionString[];
 
 @interface UIViewController (HUD)
 
-@property MBProgressHUD *hudIndeterminate;
-@property MBProgressHUD *hudDeterminate;
-@property MBProgressHUD *hudText;
+@property (readonly) MBProgressHUD *hudIndeterminate;
+@property (readonly) MBProgressHUD *hudDeterminate;
+@property (readonly) MBProgressHUD *hudText;
+
+@property (readonly) MBProgressHUD *hudIndeterminateWithButton;
+
+- (void)onHudButton:(UIButton *)sender;
 
 @end
