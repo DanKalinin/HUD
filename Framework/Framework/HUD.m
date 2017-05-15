@@ -225,7 +225,6 @@ static HUDConfiguration *_configuration = nil;
 #pragma mark - Actions
 
 - (void)onHudButton:(UIButton *)sender {
-    
 }
 
 @end
