@@ -41,7 +41,7 @@ static NSString *const OffsetKey = @"offset";
         NSString *selector = NSStringFromSelector(@selector(initWithName:bundle:));
         
         bundle = bundle ? bundle : [NSBundle mainBundle];
-        NSURL *URL = [bundle URLForResource:name withExtension:PlistExtension];
+        NSURL *URL = [bundle URLForResource:name withExtension:ExtensionPlist];
         NSAssert(URL, selector);
         
         self.dictionary = [NSDictionary dictionaryWithContentsOfURL:URL];
