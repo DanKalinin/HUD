@@ -37,6 +37,22 @@ FOUNDATION_EXPORT const unsigned char HUDVersionString[];
 
 
 
+@interface HUDController : NSObject
+
+- (instancetype)initWithProgressHUD:(MBProgressHUD *)progressHUD errorHUD:(MBProgressHUD *)errorHUD;
+- (void)completeWithError:(NSError *)error;
+
+@end
+
+
+
+
+
+
+
+
+
+
 @interface UIView (HUD)
 
 - (MBProgressHUD *)HUD:(NSInteger)tag;

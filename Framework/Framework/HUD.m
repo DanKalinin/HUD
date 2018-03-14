@@ -93,6 +93,48 @@ static NSString *const OffsetKey = @"offset";
 
 
 
+@interface HUDController ()
+
+@property MBProgressHUD *progressHUD;
+@property MBProgressHUD *errorHUD;
+
+@end
+
+
+
+@implementation HUDController
+
+- (instancetype)initWithProgressHUD:(MBProgressHUD *)progressHUD errorHUD:(MBProgressHUD *)errorHUD {
+    self = super.init;
+    if (self) {
+        self.progressHUD = progressHUD;
+        self.errorHUD = errorHUD;
+        
+        [self.progressHUD showAnimated:NO];
+    }
+    return self;
+}
+
+- (void)completeWithError:(NSError *)error {
+    [self.progressHUD hideAnimated:NO];
+    
+    if (error) {
+        self.errorHUD.detailsLabel.text = error.localizedDescription;
+        [self.errorHUD showAnimated:YES forTime:2.0];
+    }
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
 @implementation UIView (HUD)
 
 - (MBProgressHUD *)HUD:(NSInteger)tag {
