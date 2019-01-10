@@ -7,7 +7,7 @@
 //
 
 #import "HUD.h"
-#import <Helpers/Helpers.h>
+#import <FoundationExt/FoundationExt.h>
 #import <objc/runtime.h>
 
 static NSString *const ModeKey = @"mode";
